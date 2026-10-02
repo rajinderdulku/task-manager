@@ -1,0 +1,330 @@
+.board-back {
+    margin-bottom: 16px;
+}
+
+.project-summary h1 {
+    margin: 0 0 6px;
+    font-size: 25px;
+    font-weight: 650;
+    color: #111827;
+}
+
+.project-summary p {
+    margin: 0 0 18px;
+    max-width: 760px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: start;
+}
+
+.board-column {
+    background: #f1f2f4;
+    border-radius: 8px;
+    min-height: 320px;
+    padding: 8px;
+}
+
+.board-column.over {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+}
+
+.board-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #44546f;
+}
+
+.board-count {
+    min-width: 20px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    background: #dfe1e6;
+    color: #44546f;
+    text-align: center;
+    font-size: 12px;
+}
+
+.task-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(9, 30, 66, 0.25);
+    padding: 10px 10px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.task-card h3 {
+    overflow-wrap: anywhere;
+}
+
+.task-card:active {
+    cursor: grabbing;
+}
+
+.task-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.task-card h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #172b4d;
+}
+
+.task-card p {
+    margin: 6px 0 0;
+    color: #626f86;
+    font-size: 12px;
+}
+
+.priority {
+    display: inline-flex;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.priority-high {
+    background: #ffebe6;
+    color: #ae2e24;
+}
+
+.priority-medium {
+    background: #fff7d6;
+    color: #7f5f01;
+}
+
+.priority-low {
+    background: #f1f2f4;
+    color: #44546f;
+}
+
+.column-empty {
+    margin: 8px 6px;
+    color: #626f86;
+    font-size: 12px;
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #626f86;
+}
+
+.icon-button:hover {
+    background: #e9edf2;
+    color: #172b4d;
+}
+
+.icon-button.danger:hover {
+    background: #ffebe6;
+    color: #ae2e24;
+}
+
+.task-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(17, 24, 39, 0.45);
+}
+
+.task-dialog {
+    width: min(980px, 100%);
+    height: min(640px, calc(100vh - 48px));
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(17, 24, 39, 0.22);
+    overflow: hidden;
+}
+
+.task-dialog form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.task-dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 16px 12px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.task-dialog-title {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 22px;
+    font-weight: 650;
+    color: #111827;
+}
+
+.task-dialog-title:hover,
+.task-dialog-title:focus {
+    border-color: #93c5fd;
+    outline: none;
+}
+
+.task-dialog-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #6b7280;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.task-dialog-close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.task-dialog-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    flex: 1;
+    min-height: 0;
+}
+
+.task-dialog-main {
+    padding: 20px;
+    overflow: auto;
+}
+
+.task-dialog-main label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.task-dialog-main select,
+.task-dialog-main textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+    color: #111827;
+    font-weight: 400;
+}
+
+.task-dialog-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-dialog-main textarea {
+    min-height: 180px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.task-activity {
+    border-left: 1px solid #e5e7eb;
+    background: #f8fafc;
+    padding: 16px 16px 20px;
+    overflow: auto;
+}
+
+.task-activity h2 {
+    margin: 0 0 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.task-activity ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task-activity li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.activity-name {
+    font-size: 13px;
+    font-weight: 650;
+    color: #111827;
+}
+
+.activity-text {
+    margin-top: 2px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.task-activity time {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.quiet {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .board,
+    .task-dialog-body {
+        grid-template-columns: 1fr;
+    }
+
+    .task-dialog {
+        height: calc(100vh - 32px);
+    }
+
+    .task-activity {
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+        max-height: 240px;
+    }
+}

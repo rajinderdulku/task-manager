@@ -1,0 +1,158 @@
+.auth-page {
+    min-height: 100vh;
+    background: #f5f6f8;
+    color: #1f2937;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.auth-page button,
+.auth-page input {
+    font: inherit;
+}
+
+.auth-page button {
+    cursor: pointer;
+}
+
+.auth-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+.auth-brand {
+    background: #172033;
+    color: #fff;
+    padding: 32px 24px;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0 10px 18px;
+}
+
+.auth-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    background: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.auth-brand p {
+    margin: 0 10px;
+    color: #b8c0cf;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.auth-main {
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+}
+
+.auth-card {
+    width: min(100%, 400px);
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 28px 24px;
+}
+
+.auth-card h1 {
+    margin: 0 0 6px;
+    font-size: 25px;
+    font-weight: 650;
+    color: #111827;
+}
+
+.auth-subtitle {
+    margin: 0 0 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.auth-card input {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 9px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+    color: #111827;
+}
+
+.auth-submit {
+    width: 100%;
+    margin-top: 6px;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-submit:hover {
+    background: #1d4ed8;
+}
+
+.auth-submit:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.auth-switch {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-page .error {
+    margin: 0 0 14px;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand p {
+        display: none;
+    }
+
+    .auth-brand {
+        padding: 20px 16px 0;
+    }
+
+    .auth-main {
+        padding: 20px 16px 40px;
+        place-items: start center;
+    }
+}
